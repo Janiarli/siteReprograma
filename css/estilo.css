@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*ESTILOS PADROES*/
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	width: 1140px;
+	margin: auto;
+}
+.linha {
+	display: flex;
+}
+	.linha.espacoEntre {
+		justify-content: space-between;
+	}
+	.linha.alinharVertical{
+		align-items: center;
+		height: 100%;
+	}
+h1:first-child {
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+* { 
+	color: #292929;
+	box-sizing: border-box;
+}
+.centralizador{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.botao{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 7px 13px;
+	background: #ffffff;
+	border: solid 1px #ccc;
+	border-radius: 16px;
+	margin: 10px;
+	cursor: pointer;
+}
+.botao .fa{
+	margin-left: 5px;
+}
+	.botao .fa:only-child;{
+		margin-left: 0px;
+	}
+	.botao.amei span{
+		color: #3b1f4a;
+	}
+	.botao.amei .fa{
+		color: #3b1f4a;
+	}
+body section,
+body main{
+	padding: 20px;
+}
+/*FIM ESTILOS PADROES*/
+
+/*CABEÇALHO*/
+#cabecalho {
+	width: 100%;
+	background-color: #3b1f4a;
+	/*TORNA TAG FIXA*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#cabecalho a {
+	color: #ffffff;
+}
+#cabecalho .fa {
+	color: #ffffff;
+}
+#cabecalho .container {
+	height: 40px;
+}
+.menuHorizontal ul {
+	margin: 0;
+	padding: 0;
+}
+.menuHorizontal a {
+	padding: 0 10px;
+}
+.botao.menuHamburguer{
+	background: none;
+	display: none;
+}
+/*FIM CABEÇALHO
+
+/*BANNER*/
+#banner {
+	background-image: url(../imgs/banner_background.jpg);
+	background-size: cover;
+	padding-top: 0px;
+}
+#banner .container{
+	height: 100vh;
+}
+#slogan *{
+	color: #ffffff;
+}
+
+#slogan h1{
+	height: 81px;
+	width: 500px;
+	background: url(../imgs/logo.png) no-repeat;
+	overflow: hidden;
+	text-indent: -999999999999px;
+}
+#slogan h2{
+	text-align: center;
+}
+/*FIM BANNER*/
+
+/*VALORES*/
+.card{
+	padding: 20px;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.card img{
+	height: 100px;
+}
+.botao.amei.vermelho{
+	background: rgba(219, 74, 56, 0.59);
+	color: #ffffff;
+}
+.botao.amei.vermelho .fa{
+	color: #db4a38;
+}
+.botao.amei.vermelho span{
+	color: #db4a38;
+}
+
+/*FIM VALORES*/
+
+/*TABLET*/
+@media (max-width: 1140px){
+	.container{
+		width: 700px;
+	}
+	#navegacaoPrimaria{
+		display: none;
+	}	
+	.botao.menuHamburguer{
+		display: block;
+	}
+	.card{
+		width: 50%;		
+	}
+	.cardContainer{
+		flex-wrap: wrap;
+	}
+	#cabecalho .container{
+		position: relative;
+	}
+	#navegacaoPrimaria {
+		display: block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width: 100%;
+	}
+	#navegacaoPrimaria ul{
+		flex-direction: column;
+	}
+	#navegacaoPrimaria a {
+		display: block;
+		padding: 20px 0px;
+		padding-left: 20px;
+		background: #3b1f4a;
+		color: #ffffff;
+	}
+	#navegacaoPrimaria{
+		display: none;
+	}
+	#navegacaoPrimaria.visivel{
+		display: block;
+	}
+
+
+/*FIM TABLET*/
+
+/*SMARTPHONE*/
+@media (max-width: 700px){
+	.container{
+		width: 100%;
+	}
+	#slogan h1{
+	width: 300px;
+	background-size: contain;
+	margin: auto;
+	}
+	.card{
+		width:100%;		
+	}
+}
+/*FIM SMARTHONE*/

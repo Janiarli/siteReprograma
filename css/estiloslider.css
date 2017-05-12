@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/*ESTILOS PADROES*/
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 40px;
+}
+.container {
+	width: 1140px;
+	margin: auto;
+}
+.linha {
+	display: flex;
+}
+	.linha.espacoEntre {
+		justify-content: space-between;
+	}
+	.linha.alinharVertical{
+		align-items: center;
+		height: 100%;
+	}
+h1:first-child {
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+* { 
+	color: #292929;
+	box-sizing: border-box;
+}
+.centralizador{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.botao{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 7px 13px;
+	background: #ffffff;
+	border: solid 1px #ccc;
+	border-radius: 16px;
+	margin: 10px;
+	cursor: pointer;
+}
+.botao .fa{
+	margin-left: 5px;
+}
+	.botao .fa:only-child;{
+		margin-left: 0px;
+	}
+	.botao.amei span{
+		color: #3b1f4a;
+	}
+	.botao.amei .fa{
+		color: #3b1f4a;
+	}
+body section,
+body main{
+	padding: 20px 0px;
+}
+/*FIM ESTILOS PADROES*/
+
+/*CABEÇALHO*/
+#cabecalho {
+	width: 100%;
+	background-color: #3b1f4a;
+	/*TORNA TAG FIXA*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10;
+}
+
+#cabecalho a {
+	color: #ffffff;
+}
+#cabecalho .fa {
+	color: #ffffff;
+}
+#cabecalho .container {
+	height: 40px;
+}
+.menuHorizontal ul {
+	margin: 0;
+	padding: 0;
+}
+.menuHorizontal a {
+	padding: 0 10px;
+}
+.botao.menuHamburguer{
+	background: none;
+	display: none;
+}
+/*FIM CABEÇALHO
+
+/*SLIDER*/
+#slider{
+	height: calc(100vh - 40px);
+	width: 100%;
+	padding-top: 0px;
+	position: relative;
+}
+#slider .seta{
+	font-size: 44px;
+	position: absolute;
+	top: 250px;
+	background: none;
+	border: none;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+}
+#slider .seta.esquerda{
+	left: 0px;
+}
+#slider .seta.direita{
+	right: 0px;
+}
+#slider .bullets{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+.bullet{
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	border: none;
+	background: #ffffff;
+	margin: 0 10px;
+}
+.slideBox{
+	height: 100%;
+}
+.slide{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	transition: all 1s ease;
+	opacity: 0;
+}
+.slide.ativo{
+	opacity: 1;
+	display: flex;
+	z-index: 1;
+}
+.slide img{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#slider *{
+	color: #ffffff;
+}
+#slider .botao{
+	color: #3b1f4a;
+}
+#slogan *{
+	color: #ffffff;
+}
+
+#slogan h1{
+	height: 81px;
+	width: 500px;
+	background: url(../imgs/logo.png) no-repeat;
+	overflow: hidden;
+	text-indent: -999999999999px;
+}
+#slogan h2{
+	text-align: center;
+}
+/*FIM SLIDER*/
+
+/*VALORES*/
+.card{
+	padding: 20px;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.card img{
+	height: 100px;
+}
+.botao.amei.vermelho{
+	background: rgba(219, 74, 56, 0.59);
+	color: #ffffff;
+}
+.botao.amei.vermelho .fa{
+	color: #db4a38;
+}
+.botao.amei.vermelho span{
+	color: #db4a38;
+}
+
+/*FIM VALORES*/
+
+/*SUGESTÕES*/
+#sugestoes{
+	display: block;
+	color: #ffffff;
+}
+.form-grup label{
+	display: block;
+}
+.form-grup.errado label{
+	color: #e62117;
+}
+.form-grup.errado input{
+	border: solid 1px #e62117;
+}
+
+.balao{ 
+	margin: 10px 0
+	padding: 10px;
+	border-radius: 10px;
+	background: #3b1f4a;
+	display: block;
+}
+.balao h3{
+	margin: 0;
+}
+/*FIM SUGESTÕES */
+
+/*TABLET*/
+@media (max-width: 1140px){
+	.container{
+		width: 700px;
+	}
+	#navegacaoPrimaria{
+		display: none;
+	}	
+	.botao.menuHamburguer{
+		display: block;
+	}
+	.card{
+		width: 50%;		
+	}
+	.cardContainer{
+		flex-wrap: wrap;
+	}
+	#cabecalho .container{
+		position: relative;
+	}
+	#navegacaoPrimaria {
+		display: block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width: 100%;
+	}
+	#navegacaoPrimaria ul{
+		flex-direction: column;
+	}
+	#navegacaoPrimaria a {
+		display: block;
+		padding: 20px 0px;
+		padding-left: 20px;
+		background: #3b1f4a;
+		color: #ffffff;
+	}
+	#navegacaoPrimaria{
+		display: none;
+	}
+	#navegacaoPrimaria.visivel{
+		display: block;
+	}
+
+
+/*FIM TABLET*/
+
+/*SMARTPHONE*/
+@media (max-width: 700px){
+	.container{
+		width: 100%;
+	}
+	#slogan h1{
+	width: 300px;
+	background-size: contain;
+	margin: auto;
+	}
+	.card{
+		width:100%;		
+	}
+}
+/*FIM SMARTHONE*/
